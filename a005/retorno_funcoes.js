@@ -14,6 +14,7 @@ function pessoa(){
     };
 }
 
+//representa as chamadas aos métodos
 pessoa().nome;
 pessoa().idade;
 pessoa().sexo;

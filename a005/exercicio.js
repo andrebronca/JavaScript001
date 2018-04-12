@@ -57,11 +57,23 @@ os livros.
 */
 function book(nome){
     var livros = {
-        "javascript" : { 'quantidadePaginas' : 800, 'autor' : 'André', 'editora' : 'Press'},
-        "php" : {'quantidadePaginas' : 1200, 'autor' : 'Roberto', 'editora' : 'Elsevier'},
-        "web" : {'quantidadePaginas' : 500, 'autor' : 'Bronca', 'editora' : 'Alt'}
+        "javascript" : { 
+            'quantidadePaginas' : 800, 
+            'autor' : 'André', 
+            'editora' : 'Press'
+        },
+        "php" : {
+            'quantidadePaginas' : 1200, 
+            'autor' : 'Roberto', 
+            'editora' : 'Elsevier'
+        },
+        "web" : {
+            'quantidadePaginas' : 500, 
+            'autor' : 'Bronca', 
+            'editora' : 'Alt'
+        }
     };
-
+    /*
     if (nome){
         if (livros[nome]){
             return livros[nome];
@@ -70,7 +82,9 @@ function book(nome){
         }
     } else {
         return livros;
-    }
+    } */
+
+    return (nome) ? (livros[nome]) ? livros[nome] : 'Não localizado' : livros;
 }
 
 /*

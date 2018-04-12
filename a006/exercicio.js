@@ -33,7 +33,7 @@ Crie uma função chamada `showTeamPosition` com as seguintes características:
     "Não temos a informação do time que está nessa posição."
 */
 function showTeamPosition(pos){
-    if (pos > 0 && pos < teams.length){
+    if (pos >= 0 && pos < teams.length){
         return 'O time que está em '+ pos +'º lugar é o '+ teams[pos] +'.';
     } else {
         return 'Não temos a informação do time que está nessa posição.';
@@ -73,28 +73,36 @@ Crie uma função chamada `convertToHex`, com as seguintes características:
     "Não temos o equivalente hexadecimal para [COR]."
 */
 function convertToHex(cor){
+    var cor_hex;
     switch(cor){
         case 'red':
-            return 'O hexadecimal para a cor '+ cor +' é #f44336.';
+            cor_hex = '#f44336';
             break;
         case 'indigo':
-            return 'O hexadecimal para a cor '+ cor +' é #3f51b5.';
+            cor_hex = '#3f51b5';
             break;
         case 'blue':
-            return 'O hexadecimal para a cor '+ cor +' é #2196f3.';
+            cor_hex = '#2196f3';
             break;
         case 'teal':
-            return 'O hexadecimal para a cor '+ cor +' é #009688.';
+            cor_hex = '#009688';
             break;
         case 'amber':
-            return 'O hexadecimal para a cor '+ cor +' é #ffc107.';
+            cor_hex = '#ffc107';
             break;
         default:
             return 'Não temos o equivalente hexadecimal para '+ cor +'.';
     }
+    return 'O hexadecimal para a cor '+ cor +' é '+ cor_hex +'.';
 }
 
 /*
 Tente mostrar o hexadecimal de 8 cores diferentes usando a função criada acima.
 */
-// nem vou fazer essa chamada.
+convertToHex('red');
+convertToHex('black');
+convertToHex('purple');
+convertToHex('yellow');
+convertToHex('green');
+convertToHex('blue');
+convertToHex('white');

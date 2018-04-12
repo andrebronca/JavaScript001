@@ -23,7 +23,7 @@ no primeiro parâmetro. O índice usado para retornar o valor, deve ser o númer
 segundo parâmetro.
 */
 function getValorArray(arr, idx){
-    if (idx > 0 && idx <= arr.length){
+    if (idx >= 0 && idx <= arr.length){
         return arr[ idx ];
     } else {
         return 'Índice fornecido '+ idx +' fora do tamanho: '+ arr.length;
